@@ -128,5 +128,5 @@ protected override void OnCreate(Bundle? savedInstanceState)
      SetContentView(mauiView);
 }
 ```
-**Output**
+### Output
 ![embedded application android .png](https://support.syncfusion.com/kb/agent/attachment/article/14260/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE0MzQ0Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.N2zAabw-dNJeVwEr7DWQgmlYWrjQ9CXi6Tyra4DW5cE)
