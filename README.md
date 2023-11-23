@@ -8,13 +8,13 @@ First, enable .NET MAUI support in the native app's project file. Enable support
 
 **[XAML]**
 ```
-<propertygroup>
+<PropertyGroup>
  . . .
-   <nullable>enable</nullable>
-   <usemaui>true</usemaui>
-   <implicitusings>enable</implicitusings>
+   <Nullable>enable</Nullable>
+   <UseMaui>true</UseMaui>
+   <ImplicitUsings>enable</ImplicitUsings>
  . . .
-</propertygroup>
+</PropertyGroup>
 ```
 ### Step 3: Initialize .NET MAUI
 The pattern for initializing .NET MAUI in a native app project is to create a MauiAppBuilder object and invoke the UseMauiEmbedding method. Additionally, configure it to set up SyncfusionCore components within the .NET MAUI app.
@@ -122,6 +122,7 @@ public class MainActivity : Activity
         series.YBindingPath = "Height";
  
         chart.Series.Add(series);
+     ...
    }
 }
 ```
