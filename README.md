@@ -5,6 +5,7 @@ Create a new .NET Android application in Visual Studio.
 Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio and search for Syncfusion.Maui.Charts, then install it.
 ### Step 2: Enable .NET MAUI support
 First, enable .NET MAUI support in the native app's project file. Enable support by adding `<usemaui>` true `</usemaui>` to the `<propertygroup>` node in the project file.
+
 **[XAML]**
 ```
 <propertygroup>
@@ -17,6 +18,7 @@ First, enable .NET MAUI support in the native app's project file. Enable support
 ```
 ### Step 3: Initialize .NET MAUI
 The pattern for initializing .NET MAUI in a native app project is to create a MauiAppBuilder object and invoke the UseMauiEmbedding method. Additionally, configure it to set up SyncfusionCore components within the .NET MAUI app.
+
 **[C#]**
 ```
 protected override void OnCreate(Bundle? savedInstanceState)
@@ -28,6 +30,7 @@ protected override void OnCreate(Bundle? savedInstanceState)
 }
 ```
 Then, create a MauiApp object by invoking the Build() method on the MauiAppBuilder object. In addition, a MauiContext object should be made from the MauiApp object. The MauiContext object will be used when converting .NET MAUI controls to native types.
+
 **[C#]**
 ```
 protected override void OnCreate(Bundle? savedInstanceState)
@@ -42,6 +45,7 @@ protected override void OnCreate(Bundle? savedInstanceState)
 ```
 ### Step 4: Initialize cartesian chart
 Now, let us define a simple data model representing a data point in the chart.
+
 **[C#]**
 ```
 public class Person
@@ -52,6 +56,8 @@ public class Person
  
 ```
 Next, create a view model class and initialize a list of Person objects as shown in the following.
+
+
 **[C#]**
 ```
 public class ViewModel
@@ -72,6 +78,7 @@ public class ViewModel
 }
 ```
 [ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
+
 **[C#]**
 ```
 public class MainActivity : Activity
@@ -91,6 +98,7 @@ public class MainActivity : Activity
  
 ```
 As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the Data property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
+
 **[C#]**
 ```
 public class MainActivity : Activity
@@ -119,6 +127,7 @@ public class MainActivity : Activity
 ```
 ### Step 5: Converts the .NET MAUI control to an Android View object
 Converts the chart to an Android platform-specific view using the ToPlatform method. Set the content view of the current activity with the mauiView.
+
 **[C#]**
 ```
 protected override void OnCreate(Bundle? savedInstanceState)
