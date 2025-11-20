@@ -34,6 +34,7 @@ namespace AndroidEmbeddedApp
             {
                 Text = "Height(in cm)",
             };
+            secondaryAxis.Maximum = 220;
             chart.YAxes.Add(secondaryAxis);
 
             ColumnSeries series = new ColumnSeries();
