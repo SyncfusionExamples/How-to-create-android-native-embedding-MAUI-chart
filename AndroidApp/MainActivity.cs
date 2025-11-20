@@ -1,9 +1,9 @@
 using Syncfusion.Maui.Charts;
 using Android.App;
 using Android.OS;
-using Microsoft.Maui.Embedding;
 using Syncfusion.Maui.Core.Hosting;
 using Microsoft.Maui.Platform;
+using Microsoft.Maui.Controls.Embedding;
 
 namespace AndroidEmbeddedApp
 {
@@ -14,7 +14,7 @@ namespace AndroidEmbeddedApp
         {
             base.OnCreate(savedInstanceState);
             MauiAppBuilder builder = MauiApp.CreateBuilder();
-            builder.UseMauiEmbedding<Microsoft.Maui.Controls.Application>();
+            builder.UseMauiEmbeddedApp<Microsoft.Maui.Controls.Application>();
             builder.ConfigureSyncfusionCore();
 
             MauiApp mauiApp = builder.Build();
