@@ -1,4 +1,4 @@
-# Android-Native-Embedding-for-.NET MAUI Chart
+# Android Native Embedding for .NET MAUI Chart
 To create a [.NET MAUI Cartesian chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) in a native embedded Android application, you need to follow a series of steps. This article will guide you through the process.
 ### Step 1: Create a new .NET Android application
 Create a new .NET Android application in Visual Studio.
