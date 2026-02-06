@@ -25,7 +25,7 @@ protected override void OnCreate(Bundle? savedInstanceState)
 {
      base.OnCreate(savedInstanceState);
      MauiAppBuilder builder = MauiApp.CreateBuilder();
-     builder.UseMauiEmbedding<microsoft.maui.controls.application>();
+     builder.UseMauiEmbeddedApp<microsoft.maui.controls.application>();
      builder.ConfigureSyncfusionCore();
 }
 ```
@@ -37,7 +37,7 @@ protected override void OnCreate(Bundle? savedInstanceState)
 {
      base.OnCreate(savedInstanceState);
      MauiAppBuilder builder = MauiApp.CreateBuilder();
-     builder.UseMauiEmbedding<microsoft.maui.controls.application>();
+     builder.UseMauiEmbeddedApp<microsoft.maui.controls.application>();
      builder.ConfigureSyncfusionCore();
      MauiApp mauiApp = builder.Build();
      MauiContext _mauiContext = new MauiContext(mauiApp.Services, this);
